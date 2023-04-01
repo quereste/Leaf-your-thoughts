@@ -1,0 +1,7 @@
+Date: 2 April
+Dataset: testset_3 (~4000 photos, 300x400, four species, 40 different plants (10 plants per one species))
+
+The code I used comes from https://www.tensorflow.org/tutorials/images/classification without literally any noticeable changes, as it is only first approach which kind of worked and is only the beginning of the journey. 
+What suprised me is the score - accuracy 0.89 and val_accuracy 0.83 - sounds good with no doubt! Hopefully it is a sign we can achieve decent numbers in the end!
+
+
