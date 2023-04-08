@@ -1,11 +1,10 @@
 https://drive.google.com/drive/folders/1RH3znHAJBEz52oFyWAD1bXuLq1Ct7rk7?usp=sharing
-here's a link to the last dataset I build - I took 4000 photos in the following manner:
+here's a link to the last dataset I build - I took 6000 photos in the following manner:
 from 4 species from my family's garden I picked ~10 plants from each species and took ~10 photos on 10 backgrounds,
-together 4 * 10 * 10 * 10 photos - as trees currently mostly do not have developed leaves, 
+together 4 * 10 * 10 * 10 photos, same stuff with 2 plants belonging to two distinct species at home (2000 photos) - as trees currently mostly do not have developed leaves, 
 I thought it may be practical to test AI on such "leaves" before we move on to trees
 I used this dataset on most-basic AI model from most-introductory Tensorflow tutorial and got really promising results
 (I've got original photos locally with resolution 4122x3096, those on Google Drive were resized into 400x300)  
-[update 5.04 - I added >800 photos of next species (something_else_2, not used in approach 2.04]
 
 https://drive.google.com/drive/folders/1SE4xMy_Bfg3ZJ2tokppGASDcPQzQDRJ4?usp=sharing
 here's link to a test-testset, I took ~380  photos of four tree species to have something concrete to work on with coding attempts
