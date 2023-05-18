@@ -1,12 +1,9 @@
 package com.jagiellonianleaf.leafyourthoughts.fragments
 
 import android.Manifest
-import android.content.ContentValues
 import android.content.Context
 import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +11,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.activity.result.PickVisualMediaRequest
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.camera.core.*
 import androidx.camera.core.resolutionselector.AspectRatioStrategy
 import androidx.camera.core.resolutionselector.ResolutionSelector
@@ -21,21 +20,30 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.jagiellonianleaf.leafyourthoughts.MLClassifierViewModel
 import com.jagiellonianleaf.leafyourthoughts.R
 import com.jagiellonianleaf.leafyourthoughts.databinding.FragmentCameraBinding
-import java.text.SimpleDateFormat
-import java.util.*
-import java.util.concurrent.ExecutorService
 
 class CameraFragment : Fragment() {
     private lateinit var viewBinding: FragmentCameraBinding
     private var imageCapture: ImageCapture? = null
-    private lateinit var cameraExecutor: ExecutorService
     private lateinit var safeContext: Context
     private val viewModel: MLClassifierViewModel by activityViewModels()
+    // Registers a photo picker activity launcher in single-select mode.
+    private val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
+        // Callback is invoked after the user selects a media item or closes the
+        // photo picker.
+        if (uri != null) {
+            Log.d("PhotoPicker", "Selected URI: $uri")
+            viewModel.predict(uri)
+            val action = CameraFragmentDirections
+                .actionCameraFragmentToClassificationResultFragment()
+            findNavController().navigate(action)
+        } else {
+            Log.d("PhotoPicker", "No media selected")
+        }
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -60,6 +68,9 @@ class CameraFragment : Fragment() {
         }
         view.findViewById<ImageButton>(R.id.image_capture_button).setOnClickListener {
             takePhoto()
+        }
+        view.findViewById<ImageButton>(R.id.image_picker_button).setOnClickListener {
+            pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
     }
 
@@ -141,11 +152,6 @@ class CameraFragment : Fragment() {
             preview.setSurfaceProvider(viewBinding.viewFinder.surfaceProvider)
 
         }, ContextCompat.getMainExecutor(safeContext))
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        cameraExecutor.shutdown()
     }
 
     companion object {

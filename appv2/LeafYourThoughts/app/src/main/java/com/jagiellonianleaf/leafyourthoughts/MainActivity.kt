@@ -3,7 +3,6 @@ package com.jagiellonianleaf.leafyourthoughts
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AlertDialog
 import com.google.android.gms.tflite.client.TfLiteInitializationOptions
 import org.tensorflow.lite.task.gms.vision.TfLiteVision
 
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val options = TfLiteInitializationOptions.builder()
-            .setEnableGpuDelegateSupport(true)
+//            .setEnableGpuDelegateSupport(true)
             .build()
 
         TfLiteVision.initialize(applicationContext, options).addOnSuccessListener {

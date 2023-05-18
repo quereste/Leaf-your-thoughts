@@ -3,12 +3,13 @@ package com.jagiellonianleaf.leafyourthoughts
 import android.app.Application
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.ImageDecoder
+import android.net.Uri
 import android.util.Log
 import androidx.camera.core.ImageProxy
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
@@ -29,11 +30,11 @@ class MLClassifierViewModel(application: Application) : AndroidViewModel(applica
 
     init {
         val baseOptions = BaseOptions.builder()
-            .useGpu()
+//            .useGpu()
             .build()
         val options = ImageClassifierOptions.builder()
             .setBaseOptions(baseOptions)
-            .setMaxResults(1)
+            .setMaxResults(-1)
             .build()
         model = ImageClassifier.createFromFileAndOptions(getApplication(), modelFile, options)
     }
@@ -46,20 +47,33 @@ class MLClassifierViewModel(application: Application) : AndroidViewModel(applica
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
     }
 
-    private fun processImage(imageProxy: ImageProxy): TensorImage {
+    private fun processImage(bitmap: Bitmap): TensorImage {
         val imageProcessor = ImageProcessor.Builder()
-            .add(ResizeOp(224, 224, ResizeOp.ResizeMethod.BILINEAR))    // TODO: check out the other resize method
+            .add(ResizeOp(300, 400, ResizeOp.ResizeMethod.BILINEAR))    // TODO: check out the other resize method
             .build()
-        Log.w("imageProxy format: ", imageProxy.format.toString())
         var tfImage = TensorImage(DataType.UINT8)
-        tfImage.load(imageProxyToBitmap(imageProxy))
+        tfImage.load(bitmap)
         tfImage = imageProcessor.process(tfImage)
         return tfImage
     }
 
+    fun predict(uri: Uri) {
+        val source = ImageDecoder.createSource(getApplication<Application>().contentResolver, uri)
+        var bitmap = ImageDecoder.decodeBitmap(source)
+        bitmap = bitmap.copy(Bitmap.Config.ARGB_8888,true)
+        val tensorImage = processImage(bitmap)
+        _predict(tensorImage)
+    }
+
     fun predict(imageProxy: ImageProxy) {
-        val res = model?.classify(processImage(imageProxy))
+        val bitmap = imageProxyToBitmap(imageProxy)
+        val tensorImage = processImage(bitmap)
+        _predict(tensorImage)
         imageProxy.close()
+    }
+
+    private fun _predict(tensorImage: TensorImage) {
+        val res = model?.classify(tensorImage)
         val label = res?.get(0)?.categories?.get(0)?.label
         _classificationResult.postValue(label ?: "Failed to predict?(placeholder)")
         Log.i("Classification result: ", "${label}: ${res?.get(0)?.categories?.get(0)?.label}")
