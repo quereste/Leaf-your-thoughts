@@ -4,6 +4,7 @@ import android.app.Application
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.ImageDecoder
+import android.graphics.Matrix
 import android.net.Uri
 import android.util.Log
 import androidx.camera.core.ImageProxy
@@ -39,19 +40,25 @@ class MLClassifierViewModel(application: Application) : AndroidViewModel(applica
         model = ImageClassifier.createFromFileAndOptions(getApplication(), modelFile, options)
     }
 
+    fun Bitmap.rotate(degrees: Float): Bitmap =
+        Bitmap.createBitmap(this, 0, 0, width, height, Matrix().apply { postRotate(degrees) }, true)
+
     private fun imageProxyToBitmap(image: ImageProxy): Bitmap {
         val planeProxy = image.planes[0]
         val buffer: ByteBuffer = planeProxy.buffer
         val bytes = ByteArray(buffer.remaining())
         buffer.get(bytes)
-        return BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+        var bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+        bitmap = Bitmap.createScaledBitmap(bitmap, 400, 300, false)
+        bitmap = bitmap.rotate(image.imageInfo.rotationDegrees.toFloat())
+        return bitmap
     }
 
     private fun processImage(bitmap: Bitmap): TensorImage {
         val imageProcessor = ImageProcessor.Builder()
-            .add(ResizeOp(300, 400, ResizeOp.ResizeMethod.BILINEAR))    // TODO: check out the other resize method
+            .add(ResizeOp(400, 300, ResizeOp.ResizeMethod.BILINEAR))
             .build()
-        var tfImage = TensorImage(DataType.UINT8)
+        var tfImage = TensorImage(DataType.FLOAT32)
         tfImage.load(bitmap)
         tfImage = imageProcessor.process(tfImage)
         return tfImage
@@ -67,9 +74,9 @@ class MLClassifierViewModel(application: Application) : AndroidViewModel(applica
 
     fun predict(imageProxy: ImageProxy) {
         val bitmap = imageProxyToBitmap(imageProxy)
+        imageProxy.close()
         val tensorImage = processImage(bitmap)
         _predict(tensorImage)
-        imageProxy.close()
     }
 
     private fun _predict(tensorImage: TensorImage) {
