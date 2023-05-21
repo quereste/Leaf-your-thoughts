@@ -3,4 +3,68 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="camera_button">camera_button</string>
+
+    <string name="maple_name">Klon zwyczajny</string>
+    <string name="maple_description">Choć klon zwyczajny może osiągać do 35 metrów wysokości, okazy okalające naszą Aleję Zamkową mierzą jak dotąd dziesięć razy mniej. Sprawdza się za to ustęp o kulistej koronie, malowniczo prezentującej się w promieniach Słońca.</string>
+    <string name="maple_leaves">Charakterystyczne liście nawet dla tych, którzy nie wiążą ich z konkretnym gatunkiem, lecz bardziej z wykonanymi niegdyś kolażami na plastyce – naprzeciwległe, z 5–7 klapami okraszonymi spiczastymi ząbkami. Jasnozielone zabarwienie przechodzi na jesień w kolor żółty.</string>
+    <string name="maple_flowers">Co wielce charakterystyczne, wielokwiatowe baldachogrona klonu pojawiają się jeszcze przed liśćmi – na przełomie kwietnia i maja. Przez dobrych kilka tygodni do woli można radować się ich widokiem, nim skryją się w gęstej liściastej szacie.</string>
+    <string name="maple_fruits">Noski, czy też w naukowym dialekcie: podwójne skrzydlaki, mają długość około pięciu centymetrów. Matematyczny smaczek jest taki, że czasem ustawiają się pod rozwartym kątem względem siebie.</string>
+    <string name="maple_bark">Kora wraz z biegiem lat z jasnej szarości przehodzi niemal w czerń, natomiast początkową jej gładkość zaczynają zdobić podłużne wgłębienia.</string>
+    <string name="maple_habitat">Występuje na rozległych obszarach Euroazji, znosi cień, zaś lubuje się w wilgotnych glebach gliniastych. Można go spotkać w parkach, przy drogach i wydziałach kierunków ścisłych.</string>
+
+    <string name="birch_name">Brzoza</string>
+    <string name="birch_description">Występuje w kilku podgatunkach, więc dobrze, że niemal wszystkie (prócz brzozy czarnej) posiadają rzadki atrybut, który przyniósł im zasłużoną estymę – chodzi oczywiście o czarno-białą korę.</string>
+    <string name="birch_leaves">Krótki ogonek (nie dłuższy niż 3 centymetry), wieńczy drobny liść w kształcie znajdującym się gdzieś pomiędzy trójkątem a rombem. Brzeg liścia posiada zaostrzone wypustki, podwójnie ząbkowane.</string>
+    <string name="birch_flowers">Kwiaty brzozy wykształcają się od kwietnia do maja, równolegle z rozwojem liści. Bystry obserwator odróżni kwiaty żeńskie od męskich. W obu przypadkach dopatrzy się kotek: w pierwszym zielonych, w drugim – brązowożółtych.</string>
+    <string name="birch_fruits">Ależ tak, na brzozie, bądź pod nią, spotkać można owoce, opatrzone skrzydłami orzechy w łupinach. Proces ich dojrzewania obserwuje się na przestrzeni pomiędzy lipcem a wrześniem.</string>
+    <string name="birch_bark">Kory bodaj nikomu nie trzeba przedstawiać. Do znanej wszystkim sylwetki warto dodać, że początkowo gładko łuszcząca się kora w kolejnych latach istotnie grubieje, tworząc dla drzewa mocny puklerz.</string>
+    <string name="birch_habitat">Występująca w różnorodnych ekosystemach Euroazji, czy to w Alpach (do 1100 metrów), czy to w północnym Iranie, brzoza nie ma większych wymagań. Z tego względu z powodzeniem pełni rolę gatunku pionierskiego. W otoczeniu naszego Wydziału można się jej doszukać w kilku zagajnikach. Trud poszukiwań nagrodzi niezaprzeczalny urok okazów.</string>
+
+    <string name="small_linden_name">Lipa drobnolistna</string>
+    <string name="small_linden_description">Sylwetka lipy drobnolistnej przybiera różne postaci, w zależności od towarzystwa innych drzew bądź braku takowego. Samotnie ma krótki pień, skupiający koronę, natomiast w zwarciu korona wieńczy pień już zdecydowanie wyższy.</string>
+    <string name="small_linden_leaves">Znakiem znamiennym dla lip jest sercowaty kształt blaszki. Dla lipy drobnolistnej liść jest dodatkowo drobno piłkowany. Nad wyraz spostrzegawczy obserwator dostrzeże niuans: brązowe włoski porastające zakończenia nerwów.</string>
+    <string name="small_linden_flowers">Kwiatami drzewo ucieszy oczy studenta–konesera w czasie letniej sesji lub tuż po niej, będą one żółtobiałe, zliczone powinny zmieścić się w zakresie [4, 11], naturalnie ograniczonym do liczb całkowitych.</string>
+    <string name="small_linden_fruits">Nietuzinkowo drobne, kuliste, o średnicy nieosiągającej nawet jednego centymetra. Tyle dobrze, że opatrzone na drogę powietrzną z drzewa na ziemię skórzastym skrzydełkiem, dadzą się dzięki takiemu  spadochronowi łatwiej zlokalizować w locie.</string>
+    <string name="small_linden_bark">Ciemnoszara kora może ustąpić miejsca kolorowi zbliżonemu do czerwieni, zaś początkową gładkośc zwykły zastąpiać mnogie, podłużne blizny.</string>
+    <string name="small_linden_habitat">Siedlisko lipy ogranicza wrażliwość na wiosenne przymrozki, jak i na zanieczyszczenie powietrza. Tym bardziej należy się cieszyć, że okazy lipy drobnolistnej strzegą budynku naszego wydziału od Północy.</string>
+
+    <string name="silver_linden_name">Lipa srebrzysta</string>
+    <string name="silver_linden_description">Nazwa drzewa całkowicie nieprzypadkowa, wszak już z daleka w liściach widać połysk tego cennego kruszca mieniącego się w promieniach Słońca, o ile tylko cieszymy się pogodną aurą.</string>
+    <string name="silver_linden_leaves">Jak już wspomniano, to właśnie liście lipy srebrzystej składają się swoimi walorami na jej tytuł. Dokładnie zaś ich spód z szarym bądź białym (słowem: srebrnym) zabarwieniem. Dopiero nieubłagany cykl przyrody sprowadza te wspaniałe organy do żółtej (czy złotej?) kolorystyki.</string>
+    <string name="silver_linden_flowers">Kwiaty lipy srebrzystej wykształcają się w pełni w lipcu, stanowiąc kolejny powód, by cieszyć się z rozpoczynających się wakacji. Swoim wyglądem i naturą zupełnie przypominają żółtobiałe organy właściwe lipie drobnolistnej.</string>
+    <string name="silver_linden_fruits">Z kolei na przełomie końca studenckich wakacji i początku nowego roku akademickiego wśród liści ukazują się kuliste, żłobione orzeszki. Studia nad ich fakturą nasuwają anatomiczne skojarzenie słabo wyżłobionych żeber.</string>
+    <string name="silver_linden_bark">Wrażenie srebrzystości potęguje dodatkowo kora drzewa. Skrupulatny dendrolog przypisze jej kolor szary, lecz któż nie zobaczy w niej czegoś więcej ponad zwykłą monotonię.</string>
+    <string name="silver_linden_habitat">W naturze można ją spotkać w lasach mieszanych tak Europy, jak i Azji; w naszym regionie stanowi cenioną ozdobę parków; przy naszym Wydziale – zwieńczenie Alei Zamkowej - patrząc na nią z odpowiedniej strony można dostrzec i Wawel!</string>
+
+    <string name="hornbeam_name">Grab pospolity</string>
+    <string name="hornbeam_description">Tak wysokość (25 metrów), jak i kształt korony (kulisty) nasze wydziałowe graby dopiero zaczynają osiągać. Już teraz jednak stanowią atrakcyjny obiekt obserwacji dendrologicznych.</string>
+    <string name="hornbeam_leaves">Kształt liści należy określić jako jajowato – eliptyczny, o podwójnie piłkowanym brzegu. Choć wiele innych gatunków drzew wpasowałoby się do takiego opisu, z pomocą przy klasyfikacji przychodzi drobne a regularne owłosienie wokół tych organów, właściwe dla grabu pospolitego.</string>
+    <string name="hornbeam_flowers">Należy spodziewać się kwiatów grabu pospolitego w maju bądź czerwcu, w następującej postaci: kwiat męski pozbawiony okwiatu, zgrupowany w kotkach osiągających 7 centymetrów, kwiat żeński z niepozornym okwiatem i z jeszcze drobniejszymi kotkami, długości właściwej calowi.</string>
+    <string name="hornbeam_fruits">Od smutnej jesieni aż do pierwszych dni wiosny z grabu pospolitego opadają skryte w trójklapowych skrzydełkach twarde, jajowate owoce. Do wędrówki gotują się w luźnych owocostanach, mierzących pół stopy.</string>
+    <string name="hornbeam_bark">Gdyby próbować rozpoznawać grab, patrząc jedynie na jego korę, łatwo o omyłkę na rzecz buka. Co wyróżnia grab pospolity to falisty przekrój pnia, wynikający z wypukłości i wgłębień.</string>
+    <string name="hornbeam_habitat">Grab pospolity upodobał sobie niziny o klimacie z ciepłym latem. W ośrodkach miejskich można spotkać go jako składnik żywopłotu, wobec niepospolicie dobrego znoszenia częstego przycinania przez gorliwych ogrodników.</string>
+
+    <string name="red_hornbeam_name">Grab czerwonolistny</string>
+    <string name="red_hornbeam_description">Można powiedzieć, że grab czerwonolistny wygląda zupełnie jak grab pospolity, gdyby nie jeden, lecz jakże widoczny wyróżnik – kolor liści. Ciemnoczerwony czy wręcz bordowy od samego początku wiosny, stanowi począwszy od kwietnia. ciekawe urozmaicenie roślinnej szaty.</string>
+    <string name="red_hornbeam_leaves">Liście jajowato – eliptyczne, co najmniej ciemnoczerwone, z wyraźnym jaśniejszym unerwieniem. Gdyby to nie wystarczyło, można dopatrzeć się drobnych włosków wokół całego brzegu liścia. Doświadczony dendrolog przytaknie z pewnością, że od opisu zwykłego pospolitego grabu, ten opis różni się jedynie kolorem liści.</string>
+    <string name="red_hornbeam_flowers">Skąpe źródła naukowe nie pozwalają na precyzyjny opis kwiatów tego konkretnego podgatunku. Należy przeprowadzić dalsze studia w tym kierunku, by zyskać potwierdzenie przypuszczenia o bliźniaczej do grabu pospolitego charakterystyce kwiatostanów.</string>
+    <string name="red_hornbeam_fruits">Ubogie notatki dendrologów nie pozwalają i tu również na jednoznaczny osąd. Rozsądnym przypuszczeniem jest założenie, że grab czerwony dzieli rodzaj owoców również ze swoim najbliższym kuzynem.</string>
+    <string name="red_hornbeam_bark">Kora grabu pospolitego jest szara i gładka. Wobec tak niezwykłego zabarwienia liści możemy dopuścić przynajmniej dość standardową kolorystykę pnia.</string>
+    <string name="red_hornbeam_habitat">Podgatunek, zdaje się, przede wszystkim ozdobny, polecany przez znawców do pojedynczych nasadzeń formowanych, jak i do regularnych żywopłotów, wobec łagodnie znoszonych przycinań.</string>
+
+    <string name="red_maple_name">Klon czerwony</string>
+    <string name="red_maple_description">Drzewo ozdobne, przejawiające się w licznych gatunkach, takich jak nazwany z angielska Royal Red Norway Maple. Przeznaczenie tych drzew wiąże się z mniejszą ilością czysto botanicznych faktów w literaturze przedmiotu, choć w razie potrzeby rozsądna wydaje się ekstrapolacja cech na podstawie klonu zwyczajnego.</string>
+    <string name="red_maple_leaves">Zupełnie jak u klona zwyczajnego, choć tu przyjmują barwę nieosiągalną dla tego drzewa nawet w czasie barwnej jesieni. Z tym jednym, arcyważnym wyjątkiem, pasują do wyobrażeń o liściu klonu, jakie ma każdy z nas.</string>
+    <string name="red_maple_flowers">Skąpe źródła naukowe nie pozwalają na precyzyjny opis kwiatów tego konkretnego podgatunku. Należy przeprowadzić dalsze studia w tym kierunku, by zyskać potwierdzenie przypuszczenia o bliźniaczej do klonu zwyczajnego charakterystyce kwiatostanów.</string>
+    <string name="red_maple_fruits">Studia nad owocami klonu czerwonego pokazują znane ze zwyczajnego gatunku noski. Dla lepszego dopasowania barw klon czerwony również i skrzydlaki przemalował na głęboki, bordowy kolor i należy przyznać, że prezentuje się w nich wyśmienicie.</string>
+    <string name="red_maple_bark">Kora szarawa, gładka, choć z mogącymi zarysować się podłużnymi bruzdami. Stanowiąc stonowane tło dla niezwykłych liści, sama pozostaje w ich cieniu, korzystajac w ten sposób z ochrony przed letnim Słońcem.</string>
+    <string name="red_maple_habitat">Drzewo przygotowane pod ścisłe wymagania - jako gatunek ozdobny musi wpasować się w gusta Ogrodników. Mnogość czerwonych klonów w okolicy Wydziału sugeruje, że z tego zadania wywiązał się bez zarzutu.</string>
+
+    <string name="liriodendron_name">Tulipanowiec</string>
+    <string name="liriodendron_description">Przybysz zza Oceanu, gdzie dorasta do 60 metrów wysokości. Na Starym Kontynencie osiąga 35 metrów, przy naszym Wydziale – jak dotąd około piętnastu.</string>
+    <string name="liriodendron_leaves">Liść wymykający się konwencjom, niezwykle charakterystyczny. Oględnie opisując ten ewenement: w dużym przybliżeniu kwadratowa blaszka z metodycznymi wcięciami, całość w zielonym wydaniu. Mówiąc precyzyjnie, wydaniu jasnozielonym z wierzchu, aż do niebieskozielonego od spodu.</string>
+    <string name="liriodendron_flowers">Prawdziwa gratka dla miłośnikóœ innej działki flory, mianowicie florystyki. Obupłciowe, pojawiające się od maja żółte kwiaty zupełnie przypominają prawdziwe tulipany. O pomyłkę dość trudno, wobec różnicy wysokości, na jakiej można się ich spodziewać.</string>
+    <string name="liriodendron_fruits">Co więcej, niespodziewanie owoce tulipanowca przypominają szyszki, stojące, a składające się z rozlicznych niełupek (innymi słowy – orzeszków). Wygląda na to, że asocjacje tulipanowe spotykają się w tulipanowcu z asocjacjami iglastymi.</string>
+    <string name="liriodendron_bark">Kora tulipanowca zwykła być ciemnoszara. Znaczące jej powierzchnię podłużne bruzdy rozkładają się równomiernie.</string>
+    <string name="liriodendron_habitat">W swojej Ojczyźnie porasta wschodnie obszary kontynentu. W Europie ceniony jako ozdobne drzewo, które przyzwoicie znosi niekorzystny okres zimowych mrozów.</string>
 </resources>

@@ -18,5 +18,9 @@
         android:id="@+id/classificationResultFragment"
         android:name="com.jagiellonianleaf.leafyourthoughts.fragments.ClassificationResultFragment"
         android:label="fragment_classification_result"
-        tools:layout="@layout/fragment_classification_result" />
+        tools:layout="@layout/fragment_classification_result" >
+    <action
+        android:id="@+id/action_classificationResultFragment_to_cameraFragment"
+        app:destination="@id/cameraFragment" />
+    </fragment>
 </navigation>

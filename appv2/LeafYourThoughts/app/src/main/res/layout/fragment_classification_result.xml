@@ -1,16 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.ClassificationResultFragment">
-
-    <TextView
-        android:id="@+id/classificationResultTextView"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/classificationResultIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wszystko wskazuje na to, że drzewo na fotografii to nic innego niż właśnie:"
+                android:textSize="20sp"
+                android:justificationMode="inter_word"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:id="@+id/classificationResultSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"/>
+            <ImageView
+                android:id="@+id/classificationResultImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+            <TextView
+                android:id="@+id/classificationResultDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="20sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultLeaves"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Liście"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultLeavesDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="20sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultFlowers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kwiaty"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultFlowerDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="20sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultFruits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Owoce"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultFruitsDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="20sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultBark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kora"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultBarkDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="20sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultHabitat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Występowanie"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_margin="20dp" />
+            <TextView
+                android:id="@+id/classificationResultHabitatDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="20sp"
+                android:layout_margin="20dp" />
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/classificationResultGoBack"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="PLACEHOLDER"
-        android:textSize="40sp"
-        android:layout_marginTop="80dp"/>
-
-</FrameLayout>
+        android:text="ROZPOZNAJ KOLEJNY GATUNEK"
+        android:textAlignment="center"
+        android:layout_margin="10dp"/>
+</LinearLayout>

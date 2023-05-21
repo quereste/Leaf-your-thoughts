@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val options = TfLiteInitializationOptions.builder()
-//            .setEnableGpuDelegateSupport(true)
+            .setEnableGpuDelegateSupport(true)
             .build()
 
         TfLiteVision.initialize(applicationContext, options).addOnSuccessListener {
