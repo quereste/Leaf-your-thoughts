@@ -14,8 +14,6 @@ import androidx.navigation.fragment.findNavController
 import com.jagiellonianleaf.leafyourthoughts.MLClassifierViewModel
 import com.jagiellonianleaf.leafyourthoughts.R
 
-data class Tree(val name: Int, val description: Int, val leaves: Int, val flowers: Int,
-                val fruits: Int, val bark: Int, val habitat:Int, val image: Int)
 
 class ClassificationResultFragment : Fragment() {
     private val viewModel: MLClassifierViewModel by activityViewModels()
@@ -60,22 +58,21 @@ class ClassificationResultFragment : Fragment() {
                 view?.findViewById<TextView>(R.id.classificationResultHabitatDetails)?.text =
                     getString(tree.habitat)
             }
-        }   // TODO: present results in a proper way
+        }
         viewModel.classificationResult.observe(this, classificationResultObserver)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val view: View = inflater.inflate(R.layout.fragment_classification_result, container, false)
-        view.findViewById<Button>(R.id.classificationResultGoBack)
-            ?.setOnClickListener {
-                val action = ClassificationResultFragmentDirections
-                    .actionClassificationResultFragmentToCameraFragment()
-                findNavController().navigate(action)
-            }
-
+        view.findViewById<Button>(R.id.classificationResultGoBack).setOnClickListener {
+                findNavController().popBackStack()
+        }
         return view
     }
 }
+
+data class Tree(val name: Int, val description: Int, val leaves: Int, val flowers: Int,
+                val fruits: Int, val bark: Int, val habitat:Int, val image: Int)
